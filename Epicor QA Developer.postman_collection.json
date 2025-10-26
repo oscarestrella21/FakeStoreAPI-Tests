@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "b3d3a773-cdff-4ce5-906e-9bd5915110a3",
+		"name": "Epicor QA Developer",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49552862",
+		"_collection_link": "https://eduest98-1042692.postman.co/workspace/oscar-estrella's-Workspace~6539ef41-4914-4cf3-8e40-3f98ab589326/collection/49552862-b3d3a773-cdff-4ce5-906e-9bd5915110a3?action=share&source=collection_link&creator=49552862"
+	},
+	"item": [
+		{
+			"name": "List of products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{mainUrl}}/products",
+					"host": [
+						"{{mainUrl}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"qa.tester@example.com\",\r\n    \"username\": \"qatester\",\r\n    \"password\": \"1234\",\r\n    \"name\": {\r\n        \"firstname\": \"Oscar\",\r\n        \"lastname\": \"Estrella\"\r\n    },\r\n    \"address\": {\r\n        \"city\": \"Monterrey\",\r\n        \"street\": \"Calle QA\",\r\n        \"number\": 10,\r\n        \"zipcode\": \"64000\"\r\n    },\r\n    \"phone\": \"8112345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{mainUrl}}/users",
+					"host": [
+						"{{mainUrl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Look for specific user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "mainUrl",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
